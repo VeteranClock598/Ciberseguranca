@@ -24,7 +24,8 @@
 
     <main>
         <section class="sec-logo">
-            <img src="imagem/Logotipo segurança digital degradê moderno verde e azul.png" alt="SAFETECH Image" class="logo">
+            <img src="imagem/Logotipo segurança digital degradê moderno verde e azul.png" alt="SAFETECH Image"
+                class="logo">
             <img src="imagem/malvadeza.jpg" alt="SAFETECH Image" class="foto">
 
 
@@ -140,17 +141,39 @@
                 </a>
             </div>
         </div>
+        <section class="defesa">
+            <h2>COMO SE PROTEGER</h2>
+            <span class="p-defesa">
+            <p class="p1">Diante das diversas ameaças presentes no mundo tecnológico onde estamos frequentemente vulneráveis a
+                ataques em nossos dispositivos ou redes, devemos procurar saber como e com o que podemos nos prevenir.
+                Existem várias formas de se proteger contra os ataques cibernéticos, sendo elas:</p>
+            <ul>
+                <li><b>Software Antivírus</b> são ferramentas essenciais e amplamente utilizadas para garantir a segurança de
+                    dispositivos contra ameaças cibernéticas. Por exemplo, empresas frequentemente utilizam software
+                    antivírus para proteger informações confidenciais e assegurar a integridade de suas operações. Um
+                    exemplo comum de antivírus amplamente utilizado no dia a dia é o Windows Defender, integrado ao
+                    sistema
+                    operacional Windows, que oferece proteção em tempo real contra malware e outras ameaças. Além disso,
+                    muitos softwares antivírus modernos empregam inteligência artificial para identificar e mitigar
+                    novos
+                    tipos de ataques, desempenhando um papel crucial na proteção de dados importantes e pessoais,
+                    bloqueando
+                    acessos indesejados e mantendo os dispositivos seguros.</li><br>
 
-        <section class="about">
-            <h3>Sobre Nós</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ex tellus, imperdiet ac mi sed,
-                condimentum lacinia nisi. Pellentesque id congue libero. Quisque ac tempus erat, non pellentesque quam.
-                Donec eget mi at mi gravida posuere. (Describe your company here)</p>
-        </section>
-
-        <section class="contact">
-            <h3>Contato</h3>
-            <p>Entre em contato conosco:</p>
+                <li><b>Firewalls </b>são igualmente comuns e são frequentemente utilizados para delimitar as fronteiras de uma
+                    rede privada; por exemplo, redes de escritórios costumam empregar firewalls para proteger suas
+                    infraestruturas contra ameaças online. Um firewall amplamente utilizado no cotidiano é o do sistema
+                    operacional Linux, que utiliza um modelo de código aberto, sendo facilmente modificado para diversas
+                    situações, desempenhando a função de proteger a máquina de ataques indesejados, bloqueando a
+                    entrada de conteúdos que o usuário não deseja receber. </li>
+            </ul>
+           <p class="p2"> Isto é o intuito fundamental de um software de
+            proteção, manter a segurança dos dados do usuário. Portanto, é fundamental que adotemos medidas
+            proativas para proteger nossos dispositivos e informações. Isso inclui a instalação de softwares
+            antivírus, a atualização regular dos sistemas operacionais e aplicativos, além da educação contínua
+            sobre as melhores práticas de segurança digital. Estar ciente dos riscos e agir preventivamente pode
+            fazer uma diferença substancial na proteção contra essas ameaças</p>
+        </span>
         </section>
     </main>
 
@@ -162,64 +185,64 @@
     </footer>
 </body>
 <script>
-  const slides = document.querySelector('.slides');
-const indicadores = document.querySelectorAll('.indicador');
-let index = 0;
+    const slides = document.querySelector('.slides');
+    const indicadores = document.querySelectorAll('.indicador');
+    let index = 0;
 
-// Atualizar a posição do carrossel
-function mudarSlide(novoIndex) {
-    index = novoIndex;
-    slides.style.transform = `translateX(-${index * 100}%)`;
+    // Atualizar a posição do carrossel
+    function mudarSlide(novoIndex) {
+        index = novoIndex;
+        slides.style.transform = `translateX(-${index * 100}%)`;
 
-    // Atualizar o estado dos indicadores
-    indicadores.forEach(indicador => indicador.classList.remove('ativo'));
-    indicadores[index].classList.add('ativo');
-}
+        // Atualizar o estado dos indicadores
+        indicadores.forEach(indicador => indicador.classList.remove('ativo'));
+        indicadores[index].classList.add('ativo');
+    }
 
-// Adicionar evento de clique nos indicadores
-indicadores.forEach((indicador, i) => {
-    indicador.addEventListener('click', () => mudarSlide(i));
-});
+    // Adicionar evento de clique nos indicadores
+    indicadores.forEach((indicador, i) => {
+        indicador.addEventListener('click', () => mudarSlide(i));
+    });
 
-// Função de arrastar (opcional para maior interatividade)
-let startX = 0;
-let isDragging = false;
+    // Função de arrastar (opcional para maior interatividade)
+    let startX = 0;
+    let isDragging = false;
 
-// Função de toque (touch) para dispositivos móveis
-function iniciarArraste(e) {
-    startX = e.touches ? e.touches[0].clientX : e.clientX;  // Usa o toque (touch) ou o mouse (clientX)
-    isDragging = true;
-}
+    // Função de toque (touch) para dispositivos móveis
+    function iniciarArraste(e) {
+        startX = e.touches ? e.touches[0].clientX : e.clientX;  // Usa o toque (touch) ou o mouse (clientX)
+        isDragging = true;
+    }
 
-// Função de movimentação para ambos, toque e mouse
-function moverArraste(e) {
-    if (!isDragging) return;
-    const deslocamento = (e.touches ? e.touches[0].clientX : e.clientX) - startX;  // Verifica se é toque ou mouse
-    if (deslocamento > 100 && index > 0) { // Arrastar para a esquerda
-        mudarSlide(index - 1);
-        isDragging = false;
-    } else if (deslocamento < -100 && index < indicadores.length - 1) { // Arrastar para a direita
-        mudarSlide(index + 1);
+    // Função de movimentação para ambos, toque e mouse
+    function moverArraste(e) {
+        if (!isDragging) return;
+        const deslocamento = (e.touches ? e.touches[0].clientX : e.clientX) - startX;  // Verifica se é toque ou mouse
+        if (deslocamento > 100 && index > 0) { // Arrastar para a esquerda
+            mudarSlide(index - 1);
+            isDragging = false;
+        } else if (deslocamento < -100 && index < indicadores.length - 1) { // Arrastar para a direita
+            mudarSlide(index + 1);
+            isDragging = false;
+        }
+    }
+
+    // Função de finalizar o arraste (tanto para mouse quanto para toque)
+    function finalizarArraste() {
         isDragging = false;
     }
-}
 
-// Função de finalizar o arraste (tanto para mouse quanto para toque)
-function finalizarArraste() {
-    isDragging = false;
-}
+    // Adicionando eventos para o mouse
+    slides.addEventListener('mousedown', iniciarArraste);
+    slides.addEventListener('mousemove', moverArraste);
+    slides.addEventListener('mouseup', finalizarArraste);
+    slides.addEventListener('mouseleave', finalizarArraste);
 
-// Adicionando eventos para o mouse
-slides.addEventListener('mousedown', iniciarArraste);
-slides.addEventListener('mousemove', moverArraste);
-slides.addEventListener('mouseup', finalizarArraste);
-slides.addEventListener('mouseleave', finalizarArraste);
-
-// Adicionando eventos para toque (touch)
-slides.addEventListener('touchstart', iniciarArraste);
-slides.addEventListener('touchmove', moverArraste);
-slides.addEventListener('touchend', finalizarArraste);
-slides.addEventListener('touchcancel', finalizarArraste);
+    // Adicionando eventos para toque (touch)
+    slides.addEventListener('touchstart', iniciarArraste);
+    slides.addEventListener('touchmove', moverArraste);
+    slides.addEventListener('touchend', finalizarArraste);
+    slides.addEventListener('touchcancel', finalizarArraste);
 
 </script>
 
