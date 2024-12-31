@@ -521,6 +521,13 @@ footer {
 
 }
 
+@media (max-width: 390px){
+    .video{
+        width: 340px;
+        height: 180.75px;
+    }
+}
+
 @media (max-width: 360px) {
 
     
@@ -586,9 +593,11 @@ footer {
         left: 50px;
         height: 270px;
     }
+    
 }
 
 @media (max-width: 815px)and (min-width:746px) {
+    
     .home li {
         left: 300px;
 
@@ -599,8 +608,5 @@ footer {
         height: 270px;
     }
 
-    .video{
-        width: 448px;
-        height: 252px;
-    }
+   
 }
