@@ -598,4 +598,9 @@ footer {
         left: 100px;
         height: 270px;
     }
+
+    .video{
+        width: 448px;
+        height: 252px;
+    }
 }
