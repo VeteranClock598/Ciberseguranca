@@ -464,6 +464,9 @@ footer {
     .p-defesa{
         font-size: 15px;
     }
+    body{
+        color: red;
+    }
 }
 
 @media (max-width: 432px) {
@@ -600,7 +603,7 @@ footer {
         left: 50px;
         height: 270px;
     }
-    
+   
 }
 
 @media (max-width: 815px)and (min-width:746px) {
