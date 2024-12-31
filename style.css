@@ -580,6 +580,13 @@ footer {
     .paragrafo {
         left: 0px;
     }
+    .video{
+        width: 320px;
+        height: 160.75px;
+    }
+    .p-ataques{
+        font-size: 12px;
+    }
 }
 
 @media (max-width: 746px)and (min-width:709px) {
