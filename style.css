@@ -230,9 +230,7 @@ header {
     top: 46px;
 }
 
-.defesa{
-   
-}
+
 
 .p-defesa{
     background-color: rgb(255, 255, 255);
@@ -436,6 +434,17 @@ footer {
     .home li {
         left: 142px;
     }
+    
+}
+
+@media (max-width:436px){
+    .defesa h2{
+        padding-top: 20px;
+        font-size: 30px;
+    }
+    .p-defesa{
+        font-size: 15px;
+    }
 }
 
 @media (max-width: 432px) {
@@ -489,13 +498,13 @@ footer {
     .paragrafo {
         left: 0px;
     }
-
+   
 
 }
 
 @media (max-width: 360px) {
 
-
+    
     .home li {
         left: -10px;
         width: 90px;
