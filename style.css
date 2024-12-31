@@ -330,8 +330,6 @@ footer {
     display: flex;
     justify-content: center;
 }
-body{
-    color: red;}
 
 @media (max-width:854px) {
 
@@ -437,7 +435,6 @@ body{
         position: relative;
         top: 50px;
     }
-    
 }
 
 @media (max-width:586px) {
@@ -456,7 +453,13 @@ body{
     .home li {
         left: 142px;
     }
-    
+    .video{
+        width: 320px;
+        height: 160.75px;
+    }
+    .p-ataques{
+        font-size: 12px;
+    }
 }
 
 @media (max-width:436px){
@@ -467,8 +470,6 @@ body{
     .p-defesa{
         font-size: 15px;
     }
-    
-    
 }
 
 @media (max-width: 432px) {
@@ -585,13 +586,7 @@ body{
     .paragrafo {
         left: 0px;
     }
-    .video{
-        width: 320px;
-        height: 160.75px;
-    }
-    .p-ataques{
-        font-size: 12px;
-    }
+    
 }
 
 @media (max-width: 746px)and (min-width:709px) {
@@ -605,7 +600,7 @@ body{
         left: 50px;
         height: 270px;
     }
-   
+    
 }
 
 @media (max-width: 815px)and (min-width:746px) {
