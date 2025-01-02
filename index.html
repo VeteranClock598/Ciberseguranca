@@ -214,56 +214,47 @@
     const indicadores = document.querySelectorAll('.indicador');
     let index = 0;
 
-    // Atualizar a posição do carrossel
     function mudarSlide(novoIndex) {
         index = novoIndex;
         slides.style.transform = `translateX(-${index * 100}%)`;
 
-        // Atualizar o estado dos indicadores
         indicadores.forEach(indicador => indicador.classList.remove('ativo'));
         indicadores[index].classList.add('ativo');
     }
 
-    // Adicionar evento de clique nos indicadores
     indicadores.forEach((indicador, i) => {
         indicador.addEventListener('click', () => mudarSlide(i));
     });
 
-    // Função de arrastar (opcional para maior interatividade)
     let startX = 0;
     let isDragging = false;
 
-    // Função de toque (touch) para dispositivos móveis
     function iniciarArraste(e) {
-        startX = e.touches ? e.touches[0].clientX : e.clientX;  // Usa o toque (touch) ou o mouse (clientX)
+        startX = e.touches ? e.touches[0].clientX : e.clientX;  
         isDragging = true;
     }
 
-    // Função de movimentação para ambos, toque e mouse
     function moverArraste(e) {
         if (!isDragging) return;
-        const deslocamento = (e.touches ? e.touches[0].clientX : e.clientX) - startX;  // Verifica se é toque ou mouse
-        if (deslocamento > 100 && index > 0) { // Arrastar para a esquerda
+        const deslocamento = (e.touches ? e.touches[0].clientX : e.clientX) - startX;  
+        if (deslocamento > 100 && index > 0) { 
             mudarSlide(index - 1);
             isDragging = false;
-        } else if (deslocamento < -100 && index < indicadores.length - 1) { // Arrastar para a direita
+        } else if (deslocamento < -100 && index < indicadores.length - 1) { 
             mudarSlide(index + 1);
             isDragging = false;
         }
     }
 
-    // Função de finalizar o arraste (tanto para mouse quanto para toque)
     function finalizarArraste() {
         isDragging = false;
     }
 
-    // Adicionando eventos para o mouse
     slides.addEventListener('mousedown', iniciarArraste);
     slides.addEventListener('mousemove', moverArraste);
     slides.addEventListener('mouseup', finalizarArraste);
     slides.addEventListener('mouseleave', finalizarArraste);
 
-    // Adicionando eventos para toque (touch)
     slides.addEventListener('touchstart', iniciarArraste);
     slides.addEventListener('touchmove', moverArraste);
     slides.addEventListener('touchend', finalizarArraste);
